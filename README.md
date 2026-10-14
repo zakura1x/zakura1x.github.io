@@ -14,9 +14,8 @@ favicon.svg   "ZT" icon
 
 ## Common edits
 
-- **Profile photo:** add `assets/profile.jpg` (square, ~600×600), then in `index.html` replace
-  `<div class="avatar avatar-monogram">ZT</div>` with
-  `<img class="avatar" src="assets/profile.jpg" alt="Zeus Tenerife">`.
+- **Profile photo:** overwrite `assets/profile.jpg` with a new square photo (~640×640, under 100 KB).
+  It is also the link-preview image (`og:image`) when the URL is shared.
 - **Download CV button:** add a public CV (no phone number) as `assets/Zeus-Tenerife-CV.pdf` and add
   `<a class="btn btn-ghost" href="assets/Zeus-Tenerife-CV.pdf" download>Download My CV</a>` inside `.hero-cta`.
 - **Add a project:** copy one `<article class="card project">…</article>` block in the Portfolio section and edit it.
