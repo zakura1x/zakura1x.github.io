@@ -203,6 +203,17 @@ details .bullets { margin-top: 12px; font-size: .93rem; }
 .mock-quiz .q { height: 16px; width: 80%; border-radius: 5px; background: var(--navy); opacity: .85; }
 .mock-quiz .opt { height: 16px; border-radius: 8px; border: 1px solid var(--line); background: #F4FAFD; }
 .mock-quiz .opt.on { background: var(--blue-light); border-color: var(--blue-accent); }
+.mock-board .mock-body { flex-direction: row; gap: 10px; align-items: flex-start; }
+.mock-board .lane { flex: 1; display: flex; flex-direction: column; gap: 7px; padding: 6px; border-radius: 6px; background: #F4FAFD; border: 1px solid var(--line); }
+.mock-board .lane b { height: 16px; border-radius: 4px; background: var(--white); border: 1px solid var(--line); }
+.mock-board .lane b.s { height: 10px; width: 70%; }
+.mock-board .lane b.hl { background: var(--blue-light); border-color: var(--blue-accent); }
+.project-wide { grid-column: 1 / -1; }
+@media (min-width: 861px) {
+  .project-wide { flex-direction: row; }
+  .project-wide .mock { width: 40%; height: auto; min-height: 260px; }
+  .project-wide .project-body { width: 60%; }
+}
 .mock-phone .phone { width: 96px; height: 160px; margin-top: 10px; background: var(--white); border-radius: 18px 18px 0 0; box-shadow: var(--shadow); padding: 16px 12px; display: flex; flex-direction: column; gap: 9px; border: 3px solid var(--navy); border-bottom: 0; }
 .mock-phone .ph-top { height: 6px; width: 30px; border-radius: 3px; background: var(--line); align-self: center; }
 .mock-phone .ph-amt { height: 22px; border-radius: 6px; background: var(--navy); opacity: .85; }
