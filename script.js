@@ -37,3 +37,9 @@ const reveal = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.12 });
 revealables.forEach((el) => { el.classList.add('reveal'); reveal.observe(el); });
+
+// Screenshot galleries: always open on desktop, collapsed by default on phones
+const narrow = window.matchMedia('(max-width: 860px)');
+const syncCollapse = () => document.querySelectorAll('details.mobile-collapse').forEach((d) => { d.open = !narrow.matches; });
+syncCollapse();
+narrow.addEventListener('change', syncCollapse);

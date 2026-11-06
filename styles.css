@@ -218,6 +218,13 @@ details .bullets { margin-top: 12px; font-size: .93rem; }
 .shots figcaption { font-size: .9rem; color: var(--slate); }
 .shots figcaption strong { color: var(--navy); }
 @media (max-width: 860px) { .shots { grid-template-columns: 1fr; } .shots a { height: 320px; } }
+.mobile-collapse { margin-bottom: 14px; }
+.mobile-collapse .shots { margin-top: 14px; }
+@media (min-width: 861px) {
+  .mobile-collapse { border-top: 0; padding-top: 0; }
+  .mobile-collapse > summary { display: none; }
+  .mobile-collapse .shots { margin-top: 4px; }
+}
 @media (min-width: 861px) {
   .project-wide { flex-direction: row; }
   .project-wide .mock { width: 40%; height: auto; min-height: 260px; }
