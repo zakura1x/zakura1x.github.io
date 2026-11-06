@@ -209,6 +209,15 @@ details .bullets { margin-top: 12px; font-size: .93rem; }
 .mock-board .lane b.s { height: 10px; width: 70%; }
 .mock-board .lane b.hl { background: var(--blue-light); border-color: var(--blue-accent); }
 .project-wide { grid-column: 1 / -1; }
+.project-full { grid-column: 1 / -1; }
+.shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 4px 0 10px; }
+.shots figure { margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.shots a { display: block; height: 280px; overflow: hidden; border: 1px solid var(--line); border-radius: 12px; background: #F7F7F5; transition: border-color .2s, box-shadow .2s; }
+.shots a:hover { border-color: var(--blue-accent); box-shadow: var(--shadow); }
+.shots img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.shots figcaption { font-size: .9rem; color: var(--slate); }
+.shots figcaption strong { color: var(--navy); }
+@media (max-width: 860px) { .shots { grid-template-columns: 1fr; } .shots a { height: 320px; } }
 @media (min-width: 861px) {
   .project-wide { flex-direction: row; }
   .project-wide .mock { width: 40%; height: auto; min-height: 260px; }
